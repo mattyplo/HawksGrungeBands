@@ -14,7 +14,10 @@ CLIENT_SECRET='your_client_secret'
 
 Requirements:
 You will need to download and install spotipy and xlwt
+
 This can be done with the following commands:
+
 pip install spotipy
+
 pip install xlwt
 

@@ -2,7 +2,7 @@ import spotipy
 import pprint
 import xlwt
 from spotipy.oauth2 import SpotifyClientCredentials
-
+import cred
 
 def writeTracksToExcel(query, artist):
     wb = xlwt.Workbook()
@@ -17,7 +17,7 @@ def writeTracksToExcel(query, artist):
     wb.save(artist + '.xls')
 
 # Setup authorization token to access spotify api
-client_credentials_manager = SpotifyClientCredentials(client_id='926b2b6950e745cc80d89ed6037db878', client_secret= 'd745522d16f747c79e15c2a4648b388f')
+client_credentials_manager = SpotifyClientCredentials(cred.CLIENT_ID, cred.CLIENT_SECRET)
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 
 
@@ -25,6 +25,7 @@ sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 results = sp.search(q='artist:' + 'alice in chains', type='track', limit=50)
 results2 = sp.search(q='artist:' + 'pearl jam', type='track', limit=50)
 results3 = sp.search(q='artist:' + 'soundgarden', type='track', limit=50)
+
 
 writeTracksToExcel(results, 'Alice in Chains')
 writeTracksToExcel(results2, 'Pearl Jam')

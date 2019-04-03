@@ -6,7 +6,7 @@ Each result is passed to a method which takes the track name, album the track is
 The result is three spreadsheets of a particular artists tracks and the tracks popularity.
 
 # instructions
-Create a cred.py file with your apps Client_ID and Client_Secret and place it into the HawksGrungeBands directory
+Create a cred.py file with your apps Client_ID and Client_Secret and place it into the HawksGrungeBands directory.
 It should look like this with the appropriate fields filled in.
 
 CLIENT_ID='your_client_id'

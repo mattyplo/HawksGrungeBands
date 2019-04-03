@@ -11,6 +11,7 @@ def writeTracksToExcel(query, artist):
     for i in query['tracks']['items']:
         sheet.write(count, 0, i['name'])
         sheet.write(count, 1, i['popularity'])
+        sheet.write(count, 2, i['album']['name'])
         count += 1
 
     wb.save(artist + '.xls')
